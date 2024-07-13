@@ -7,7 +7,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { CircleUser } from "lucide-react";
+import { CircleUser, Settings, HelpCircle, LogOut } from "lucide-react";
 
 export const UserMenu = () => (
   <DropdownMenu>
@@ -20,10 +20,19 @@ export const UserMenu = () => (
     <DropdownMenuContent align="end">
       <DropdownMenuLabel>My Account</DropdownMenuLabel>
       <DropdownMenuSeparator />
-      <DropdownMenuItem>Settings</DropdownMenuItem>
-      <DropdownMenuItem>Support</DropdownMenuItem>
+      <DropdownMenuItem>
+        <Settings className="mr-2 h-4 w-4" />
+        <span>Settings</span>
+      </DropdownMenuItem>
+      <DropdownMenuItem>
+        <HelpCircle className="mr-2 h-4 w-4" />
+        <span>Support</span>
+      </DropdownMenuItem>
       <DropdownMenuSeparator />
-      <DropdownMenuItem>Logout</DropdownMenuItem>
+      <DropdownMenuItem>
+        <LogOut className="mr-2 h-4 w-4" />
+        <span>Logout</span>
+      </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 );
